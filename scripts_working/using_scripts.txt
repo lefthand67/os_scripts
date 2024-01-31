@@ -1,0 +1,19 @@
+# make the script executable by user (groups and other users are disabled in this command)
+chmod 700 your_script.sh
+
+
+# start a script
+
+Source Script: Ensure that you are running the script using the `source` command or the `.` (dot) command to execute it in the current shell session. If you just run the script directly (`./your_script.sh`), it will be executed in a subshell, and any changes made (like activating the virtual environment) will only affect that subshell.
+
+Use:
+
+source your_script.sh
+# or
+. your_script.sh
+# or
+bash your_script.sh
+
+If you are not in the home directory, use:
+. ~/your_script.sh
+
