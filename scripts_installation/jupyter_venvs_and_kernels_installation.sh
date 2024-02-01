@@ -6,8 +6,11 @@ set -u
 export starting_dir=$PWD
 export python_version=11
 
+
+# General venv and all the kernels configuration
+
 # define local variables
-initial_path="/home/$USER"
+initial_path=$HOME
 dir_name="venv"
 venv_name="pymain"
 
@@ -22,7 +25,7 @@ mkdir $initial_path/$dir_name
 python3.$python_version -m venv $venv_path
 source "$venv_path/bin/activate"
 
-# jupyter installation
+# software for Jupyter
 sudo apt install pandoc -y
 sudo apt install texlive-xetex -y
 sudo apt install nodejs -y
@@ -36,7 +39,7 @@ pip install jupyter
 pip install jupyterlab==3.6.5
 pip install jupyterlab-lsp==3.10.2
 pip install python-lsp-server[all]
-# pip install jedi-language-server
+# pip install jedi-language-server  # installed globally with pipx
 pip install pyppeteer
 pip install jupyterlab-execute-time==2.0.2
 
@@ -61,7 +64,7 @@ python install.py --user
 deactivate
 
 
-# python venvs and kernels
+# addition basic and clean python venvs
 versions=(9 11 12)
 for version in "${versions[@]}"
 do
