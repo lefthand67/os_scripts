@@ -5,8 +5,12 @@ set -u
 export starting_dir=$PWD
 
 sudo apt update
-sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libpq-dev python3-dev -y
-sudo apt-get install sqlite3 libsqlite3-dev
+sudo apt install python3-dev build-essential libncurses5-dev libgdbm-dev libnss3-dev libreadline-dev libpq-dev -y
+# for lxml
+sudo apt install zlib1g-dev libxml2-dev libxslt1-dev -y
+# for cryptography
+sudo apt install libssl-dev libffi-dev -y
+sudo apt-get install sqlite3 libsqlite3-dev -y
 
 versions=(12.1 9.18)
 for version in "${versions[@]}"

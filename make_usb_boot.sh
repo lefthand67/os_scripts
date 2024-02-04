@@ -1,8 +1,4 @@
-#!/bin/bash
-
-#IMAGE_PATH="/home/$USER/Documents/"
-#IMAGE_NAME="debian-12.2.0-amd64-netinst.iso"
-#X="b"
+#! /bin/bash
 
 echo "You are about to create a boot USB disk. Enter the full path to the image:"
 read IMAGE_PATH

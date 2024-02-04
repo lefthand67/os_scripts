@@ -1,4 +1,4 @@
-#! bin/bash
+#! /bin/bash
 
-/home/$USER/.local/Telegram/Telegram
+$HOME/.local/Telegram/Telegram
 wait %1
