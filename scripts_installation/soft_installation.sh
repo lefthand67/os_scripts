@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt update
-sudo apt install curl vim-gtk3 tree klavaro clementine cmatrix neofetch -y
+sudo apt install curl vim-gtk3 tree klavaro clementine cmatrix neofetch xdotool -y
 
 # install podman stuff
 sudo apt install podman skopeo jq -y
